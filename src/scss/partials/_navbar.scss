@@ -1,0 +1,43 @@
+@use '../modules/colors';
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-switch {
+  border: none;
+  width: 2rem;
+  background: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.icon {
+  font-size: 2rem;
+  color: colors.$purple;
+}
+
+.purple {
+  color: colors.$purple;
+}
+
+.theme-image {
+  display: flex;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (max-width:720px) {
+  .title {
+    font-size: 8vw;
+  }
+
+  .purple {
+    font-size: 8vw;
+  }
+}
