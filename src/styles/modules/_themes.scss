@@ -1,0 +1,17 @@
+body[data-theme="Light"] {
+  --background: #ffffff;
+  --text-primary: #000;
+  --text-secondary: #8e05c2;
+  --accent: #8e05c2;
+  --border: #333;
+  --form-bg: #e1d9d1;
+}
+
+body[data-theme="Dark"] {
+  --background: #26272b;
+  --text-primary: #fff;
+  --text-secondary: #8e05c2;
+  --accent: #8e05c2;
+  --border: #808080;
+  --form-bg: #292e36;
+}

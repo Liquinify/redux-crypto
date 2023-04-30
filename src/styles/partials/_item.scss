@@ -1,0 +1,50 @@
+.item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 2rem auto;
+  height: 5rem;
+  box-shadow: 0px 0px 12px black;
+  border-radius: 8px;
+  position: relative;
+  color: var(--text-primary);
+
+  &__image {
+    width: 2rem;
+  }
+
+  &__symbols {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    :last-child {
+      padding-left: 0.5rem;
+    }
+  }
+
+  &__description {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.item:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .item {
+    width: 50%;
+  }
+
+  .hide-mobile {
+    display: block;
+  }
+}

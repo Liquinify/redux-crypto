@@ -1,0 +1,128 @@
+.details {
+  &__content {
+    max-width: 740px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    color: var(--text-primary);
+    box-shadow: 0px 0px 12px black;
+    border-radius: 8px;
+  }
+
+  &__pricing {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 4rem;
+    flex-direction: row;
+    align-items: center;
+    background: var(--background);
+    color: var(--text-primary);
+    box-shadow: 0px 0px 12px black;
+    border-radius: 8px;
+  }
+
+  &__price-change {
+    text-align: center;
+    width: 5rem;
+  }
+
+  &__date {
+    font-weight: bold;
+    background-color: var(--form-bg);
+    height: 1.5rem;
+  }
+
+  &__change {
+    margin-top: 0.1rem;
+  }
+
+  &__rank {
+    margin: 0.4rem 0.1rem;
+  }
+
+  &__rank-btn {
+    border: 1px solid #26272b;
+    box-shadow: 0px 0px 8px #26272b;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    padding: 0.2rem;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__info &__coin-heading {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0.5rem;
+  }
+
+  &__coin-price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 1rem;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+
+    p {
+      padding-right: 3rem;
+    }
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    width: 100%;
+    padding-inline: 0.5rem;
+  }
+
+  &__stats &__row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    margin: 0.6rem 0;
+    padding-bottom: 0.5rem;
+  }
+
+  &__about {
+    h3 {
+      margin: 1rem 0;
+      padding-inline: 1rem;
+    }
+
+    p {
+      padding-inline: 1rem;
+      padding-bottom: 1.2rem;
+    }
+  }
+
+  &__description {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .details {
+    &__pricing {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 46.5rem;
+    }
+  }
+}
