@@ -1,0 +1,20 @@
+.theme {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &__span {
+    margin-left: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .theme {
+    margin-left: 2rem;
+    &__span {
+      font-size: 0.7rem;
+      width: 5rem;
+    }
+  }
+}
