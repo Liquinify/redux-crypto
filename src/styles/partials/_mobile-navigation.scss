@@ -1,0 +1,28 @@
+.menu {
+    list-style: none;
+    z-index: 1;
+
+    &__icon {
+        position: absolute;
+        top: 2.5rem;
+        left: 80%;
+        z-index: 3;
+    }
+
+    &__items {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 1.5rem;
+        padding-bottom: 15rem;
+        flex-flow: column;
+        gap: 2rem;
+        background-color: var(--background);
+    }
+}
+

@@ -5,6 +5,7 @@ body[data-theme="Light"] {
   --accent: #8e05c2;
   --border: #333;
   --form-bg: #e1d9d1;
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 body[data-theme="Dark"] {
@@ -14,4 +15,5 @@ body[data-theme="Dark"] {
   --accent: #8e05c2;
   --border: #808080;
   --form-bg: #292e36;
+  --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
 }

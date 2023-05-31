@@ -1,0 +1,42 @@
+.fav {
+    &__title {
+        display: flex;
+        justify-content: center;
+        color: var(--text-primary);
+        font-size: 2rem;
+    }
+
+    &__options {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 5%;
+    }
+
+    &__btn {
+        height: 2.5rem;
+        width: 8rem;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: var(--form-bg);
+        border: none;
+        color: var(--text-primary);
+    }
+
+    &__text {
+        display: grid;
+        place-items: center;
+        padding-top: 10rem;
+        font-size: 2rem;
+        color: var(--text-primary);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .fav {
+        &__options {
+            padding-inline: 14rem;
+        }
+    }
+}

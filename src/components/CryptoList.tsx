@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { Link } from "react-router-dom";
 import { ICrypto } from "../models/ICrypto";
-import { cryptoApi } from "../store/services/api";
+import { useGetListOfCryptosQuery } from "../store/services/api";
 import CryptoItem from "./CryptoItem";
 import Info from "./Info";
 import Loader from "./Loader";
 import Pagination from "./Pagination";
 
-const CryptoList = () => {
+const CryptoList: FC = () => {
   const [page, setPage] = useState(1);
-  const { data, error, isLoading } = cryptoApi.useGetListOfCryptosQuery(page);
+  const { data, error, isLoading } = useGetListOfCryptosQuery(page);
 
   return (
     <div>
       <Info />
       {isLoading && <Loader />}
-      {error && <div>Could not fetch the coins</div>}
+      {error && <h1 className="details__error">Could not fetch the coins</h1>}
       {data?.map((crypto: ICrypto) => (
         <Link to={`/coin/${crypto.id}`} key={crypto.id}>
           <CryptoItem crypto={crypto} />

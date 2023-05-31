@@ -13,6 +13,7 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
+import { favouriteReducer } from "./features/favourite-slice";
 
 const persistConfig = {
   key: "root",
@@ -22,6 +23,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   theme: themeReducer,
+  favourite: favouriteReducer,
   [cryptoApi.reducerPath]: cryptoApi.reducer,
 });
 

@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Theme from "./Theme";
+import MobileNavigation from "./MobileNavigation";
+
 
 const Header = () => {
+  const [isMobile, setIsMobile] = useState<boolean>(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize); 
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+  
   return (
     <div className="header">
       <div className="header__logo">
@@ -12,9 +28,20 @@ const Header = () => {
           </h1>
         </Link>
       </div>
-      <div className="header__options">
-        <Theme />
-      </div>
+      {isMobile ? (
+        <MobileNavigation />
+      ) : (
+        <div className="header__options">
+          <Link to="favourites">
+            <div className="header__option">
+              <p className="header__text">Favourites</p>
+            </div>
+          </Link>
+          <div className="header__option">
+            <Theme />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

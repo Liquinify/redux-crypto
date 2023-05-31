@@ -1,6 +1,4 @@
 import React, { FC, SetStateAction } from "react";
-import { useAppDispatch } from "../hooks/redux";
-import { ICrypto } from "../models/ICrypto";
 
 type Props = {
   page: number;

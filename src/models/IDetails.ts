@@ -2,6 +2,9 @@ import { ICrypto } from "./ICrypto";
 
 export interface IDetails extends ICrypto {
   symbol: string;
+  image: {
+    small: string;
+  }
   market_data: {
     price_change_percentage_1h_in_currency: {
       price_change_percentage_1h_in_currency: number;

@@ -114,6 +114,13 @@
   &__description {
     padding: 0.5rem 1rem;
   }
+
+  &__error {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    color: var(--text-primary);
+  }
 }
 
 @media screen and (min-width: 1000px) {
